@@ -1,0 +1,199 @@
+<div class="cover">
+  <div class="sidebar-container">
+    <app-sidebar
+      [print]="print()"
+      [private]="private()"
+      [privateData]="privateData()"
+    />
+  </div>
+  <div class="content">
+    <span class="title">Software Engineer</span>
+    <div class="sections">
+
+      <app-section>
+        <app-section-title>Certifications</app-section-title>
+        <app-section-content>
+          <div class="certification">
+            <img class="icon" src="images/ocp.png"/>
+            <span class="description">
+              Oracle Certified Professional, Java SE 8 Programmer
+            </span>
+          </div>
+          <div class="certification">
+            <img class="icon" src="images/oca.png"/>
+            <span class="description">
+              Oracle Certified Associate, Java SE 8 Programmer
+            </span>
+          </div>
+          <div class="certification">
+            <img class="icon" src="images/awscp.png"/>
+            <span class="description">
+              AWS Certified Cloud Practitioner
+            </span>
+          </div>
+        </app-section-content>
+      </app-section>
+
+      <app-section class="main">
+        <app-section-title>Work Experiences</app-section-title>
+        <app-section-content>
+          <app-experience ref="dwarka">
+            <app-experience-company>Dwarka Jewel</app-experience-company>
+            <app-experience-title>Software Engineer</app-experience-title>
+            <app-experience-location>
+              Jaipur, India
+            </app-experience-location>
+            <app-experience-date>
+              April 2025 - August 2025
+            </app-experience-date>
+            <app-experience-description>
+              Two projects I developed independently and from scratch:
+              <br>
+              <u>Jewel Recognition Software Project</u>
+              <ul>
+                <li>
+                  Developed an AI-powered tool using Google Vision AI Product
+                  Search to automate jewel recognition, reducing catalog search
+                  time from hours to minutes.
+                </li>
+                <li>
+                  Built a Python application with a user-friendly interface,
+                  enabling employees to upload, search, and batch process jewel
+                  images.
+                </li>
+                <li>
+                  Automated PowerPoint presentation generation for search
+                  results, streamlining customer communication.
+                </li>
+              </ul>
+              <u>Task Manager and Email Client Project</u>
+              <ul>
+                <li>
+                  Designed and developed a secure web application using
+                  Angular 20 (frontend) and Python (backend) to replace
+                  outdated email and task management tools.
+                </li>
+                <li>
+                  Integrated Google Cloud APIs for direct email fetching,
+                  sending, tagging, and AI-assisted replies.
+                </li>
+                <li>
+                  Implemented monitoring tools for managers to oversee employee
+                  activities and task progress.
+                </li>
+              </ul>
+            </app-experience-description>
+            <app-experience-footer>
+              <b>Details:</b> Python, Qt (PyQt), Google Workspace,
+              Google Cloud APIs, RESTful API, Angular 20
+            </app-experience-footer>
+          </app-experience>
+
+          <app-experience ref="oxyl">
+            <app-experience-company>Oxyl</app-experience-company>
+            <app-experience-title>Fullstack Developer</app-experience-title>
+            <app-experience-location>
+              Arcueil, France
+            </app-experience-location>
+            <app-experience-date>
+              March 2024 - August 2024
+            </app-experience-date>
+            <app-experience-description>
+              <ul>
+                <li>
+                  Collaborated with a team to develop and maintain an internal
+                  training platform, implementing features to track user
+                  progress and improve overall user experience.
+                </li>
+                <li>
+                  Optimized existing codebase, ensuring better performance and
+                  stability.
+                </li>
+                <li>
+                  Worked on various aspects of the platform, including both
+                  frontend and backend development, debugging, and
+                  optimization.
+                </li>
+              </ul>
+            </app-experience-description>
+            <app-experience-footer>
+              <b>Details:</b> Java, Spring Framework, React, Angular 18,
+              NodeJS, RESTful API, AWS, Kanban Project Management
+            </app-experience-footer>
+          </app-experience>
+
+          <app-experience ref="bioteos">
+            <app-experience-company>Bioteos</app-experience-company>
+            <app-experience-title>Consulting Engineer</app-experience-title>
+            <app-experience-location>
+              Tourcoing, France
+            </app-experience-location>
+            <app-experience-date>
+              March 2023 - January 2024
+            </app-experience-date>
+            <app-experience-description>
+              <ul>
+                <li>
+                  Collaborated with a team to develop an automated microalgae
+                  cultivation system.
+                </li>
+                <li>
+                  Designed and implemented the entire system architecture,
+                  managing all aspects of the project, including engineering
+                  design and installation.
+                </li>
+              </ul>
+            </app-experience-description>
+            <app-experience-footer>
+              <b>Details:</b> V-cycle project management, Ladder, NodeJS, C
+            </app-experience-footer>
+          </app-experience>
+          @if (print()) {
+            <span class="redirect">
+              More projects and details on my website
+            </span>
+          }
+          @else {
+            <span class="redirect tour" (click)="takeATour()">
+              &rarr; More details here &larr;
+            </span>
+          }
+        </app-section-content>
+      </app-section>
+
+      <app-section class="last">
+        <app-section-title>Education</app-section-title>
+        <app-section-content>
+          <app-experience>
+            <app-experience-company>
+              Centrale Lille IG2I
+            </app-experience-company>
+            <app-experience-location>Lens, France</app-experience-location>
+            <app-experience-date>2018 - 2025</app-experience-date>
+            <app-experience-description>
+              Engineering school in Information Technologies, Programming,
+              Computer network, Automation engineering.
+            </app-experience-description>
+          </app-experience>
+        </app-section-content>
+      </app-section>
+
+    </div>
+  </div>
+</div>
+
+<ng-template toolbarContent>
+  <c-checkbox label="Print Version" (checkedChange)="print.set($event)"/>
+  @if (authenticated()) {
+    <c-checkbox
+      label="Private Version"
+      (checkedChange)="togglePrivateData($event)"
+    />
+    <button (click)="logout()">
+      Logout
+    </button>
+  }
+  @if (!authenticated()) {
+    <c-input label="Password" type="password" (submit)="login($event)"/>
+  }
+</ng-template>

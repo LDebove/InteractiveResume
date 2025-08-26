@@ -1,0 +1,14 @@
+<div (click)="open()" class="experience" [class.story]="ref()">
+  <div class="meta">
+    <div class="job">
+      <ng-content select="app-experience-company"/>
+      -
+      <ng-content select="app-experience-title"/>
+      -
+      <ng-content select="app-experience-location"/>
+    </div>
+    <ng-content select="app-experience-date"/>
+  </div>
+  <ng-content select="app-experience-description"/>
+  <ng-content select="app-experience-footer"/>
+</div>

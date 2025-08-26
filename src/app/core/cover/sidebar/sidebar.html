@@ -1,0 +1,104 @@
+<div class="sidebar">
+  <img class="photo" src="images/avatar.png"/>
+  <span class="name">Léo Debove</span>
+  <div class="links">
+    @if (print()) {
+      <img class="ad" src="images/qr.png"/>
+    }
+    <div class="link">
+      <img class="link-icon" src="images/web.png"/>
+      <a class="link-text" href="https://leodebove.com" target="_blank">
+        leodebove.com
+      </a>
+    </div>
+    @if (private() && privateData()) {
+      <div class="link">
+        <img class="link-icon" src="images/mail.png"/>
+        <a class="link-text" href="mailto:leo.debove@gmail.com" target="_blank">
+          {{privateData()!.mail}}
+        </a>
+      </div>
+      <div class="link">
+        <img class="link-icon" src="images/phone.png"/>
+        <a class="link-text">
+          {{privateData()!.phone}}
+        </a>
+      </div>
+    }
+    <div class="link">
+      <img class="link-icon" src="images/linkedin.png"/>
+      <a
+        class="link-text"
+        href="https://www.linkedin.com/in/leo-debove"
+        target="_blank"
+      >
+        linkedin.com/in/leo-debove
+      </a>
+    </div>
+    <div class="link">
+      <img class="link-icon" src="images/github.png"/>
+      <a class="link-text" href="https://github.com/LDebove" target="_blank">
+        github.com/LDebove
+      </a>
+    </div>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <span class="section-title">Profile</span>
+      <span class="section-text">
+        Recent software engineering graduate with a
+        <b>strong foundation in full-stack development</b> and a passion for
+        innovative technology solutions. Proficient in various programming
+        languages and frameworks, with a focus on delivering high-quality,
+        efficient code. Committed to writing
+        <b>clean and maintainable code</b>. Experienced in agile environments
+        and collaborating with cross-functional teams. Strong analytical skills
+        with a keen interest in developing efficient software solutions.
+        @if (print() && !private()) {
+          Passionate about solving complex problems through efficient
+          algorithms and data structures.
+        }
+        @else if (!print() && private()) {
+          Passionate about solving complex problems through efficient
+          algorithms and data structures. Skilled in designing scalable
+          architectures and optimizing system performance.
+        }
+        @else if (!print() && !private()) {
+          Passionate about solving complex problems through efficient
+          algorithms and data structures. Skilled in designing scalable
+          architectures and optimizing system performance. Continuously
+          learning emerging technologies to enhance technical expertise.
+        }
+      </span>
+    </div>
+    <div class="section">
+      <span class="section-title">Languages</span>
+      <div class="section-content">
+        <div class="language">
+          <div class="meta">
+            <span class="title">English</span>
+            <span class="level"><b>Fluent</b></span>
+          </div>
+          <span class="description">TOEIC 975 / 990</span>
+        </div>
+        <div class="language">
+          <div class="meta">
+            <span class="title">German</span>
+            <span class="level"><i>Formerly</i> Fluent</span>
+          </div>
+          <span class="description">
+            Abitur <i>(German High School Diploma)</i>
+            <br/>
+            Current level: <b>Intermediate</b>
+          </span>
+        </div>
+        <div class="language">
+          <div class="meta">
+            <span class="title">French</span>
+            <span class="level"><b>Native</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

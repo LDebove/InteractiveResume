@@ -1,0 +1,17 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  gap: 3px;
+
+  &.story:hover {
+    background-color: var(--color-1);
+    cursor: pointer;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}

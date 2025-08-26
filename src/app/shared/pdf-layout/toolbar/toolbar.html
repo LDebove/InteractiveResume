@@ -1,0 +1,16 @@
+<div
+  class="toolbar"
+  [class.expanded]="expanded()"
+  (mouseleave)="expanded.set(false)"
+>
+  <div class="toolbar-content">
+    <ng-container [ngTemplateOutlet]="content"/>
+  </div>
+</div>
+<div
+  class="toggle-button"
+  [class.expanded]="!expanded()"
+  (mouseenter)="expanded.set(true)"
+>
+  Tools
+</div>
