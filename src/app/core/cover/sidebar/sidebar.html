@@ -1,48 +1,48 @@
 <div class="sidebar">
   <img class="photo" src="images/avatar.png"/>
   <span class="name">Léo Debove</span>
-  <div class="links">
-    @if (print()) {
-      <img class="ad" src="images/qr.png"/>
-    }
-    <div class="link">
-      <img class="link-icon" src="images/web.png"/>
-      <a class="link-text" href="https://leodebove.com" target="_blank">
-        leodebove.com
-      </a>
-    </div>
-    @if (private() && privateData()) {
-      <div class="link">
-        <img class="link-icon" src="images/mail.png"/>
-        <a class="link-text" href="mailto:leo.debove@gmail.com" target="_blank">
-          {{privateData()!.mail}}
-        </a>
-      </div>
-      <div class="link">
-        <img class="link-icon" src="images/phone.png"/>
-        <a class="link-text">
-          {{privateData()!.phone}}
-        </a>
-      </div>
-    }
-    <div class="link">
-      <img class="link-icon" src="images/linkedin.png"/>
-      <a
-        class="link-text"
-        href="https://www.linkedin.com/in/leo-debove"
-        target="_blank"
-      >
-        linkedin.com/in/leo-debove
-      </a>
-    </div>
-    <div class="link">
-      <img class="link-icon" src="images/github.png"/>
-      <a class="link-text" href="https://github.com/LDebove" target="_blank">
-        github.com/LDebove
-      </a>
-    </div>
-  </div>
   <div class="sections">
+    <div class="links">
+      @if (print()) {
+        <img class="ad" src="images/qr.png"/>
+      }
+      <div class="link">
+        <img class="link-icon" src="images/web.png"/>
+        <a class="link-text" href="https://leodebove.com" target="_blank">
+          leodebove.com
+        </a>
+      </div>
+      @if (private() && privateData()) {
+        <div class="link">
+          <img class="link-icon" src="images/mail.png"/>
+          <a class="link-text" href="mailto:leo.debove@gmail.com" target="_blank">
+            {{privateData()!.mail}}
+          </a>
+        </div>
+        <div class="link">
+          <img class="link-icon" src="images/phone.png"/>
+          <a class="link-text">
+            {{privateData()!.phone}}
+          </a>
+        </div>
+      }
+      <div class="link">
+        <img class="link-icon" src="images/linkedin.png"/>
+        <a
+          class="link-text"
+          href="https://www.linkedin.com/in/leo-debove"
+          target="_blank"
+        >
+          linkedin.com/in/leo-debove
+        </a>
+      </div>
+      <div class="link">
+        <img class="link-icon" src="images/github.png"/>
+        <a class="link-text" href="https://github.com/LDebove" target="_blank">
+          github.com/LDebove
+        </a>
+      </div>
+    </div>
     <div class="section">
       <span class="section-title">Profile</span>
       <span class="section-text">
@@ -60,8 +60,7 @@
         }
         @else if (!print() && private()) {
           Passionate about solving complex problems through efficient
-          algorithms and data structures. Skilled in designing scalable
-          architectures and optimizing system performance.
+          algorithms and data structures.
         }
         @else if (!print() && !private()) {
           Passionate about solving complex problems through efficient

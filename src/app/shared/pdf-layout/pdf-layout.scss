@@ -10,4 +10,20 @@
     margin: auto;
     overflow: hidden;
   }
+  
+  @page {
+    size: A5;
+    margin: 0;
+  }
+  
+  @media print {
+    #pdf {
+      font-size: 0.985rem;
+    }
+    
+    * {
+      print-color-adjust: exact;
+    }
+  }
 }
+

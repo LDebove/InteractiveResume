@@ -190,13 +190,13 @@
       (checkedChange)="togglePrivateData($event)"
     />
   }
-  @if (!authenticated()) {
-    <c-input label="Password" type="password" (submit)="login($event)"/>
-  }
   @if (print()) {
     <c-button label="Print" (click)="generatePdf()"/>
   }
-  @if (authenticated()) {
+  @if (!authenticated()) {
+    <c-input label="Password" type="password" (submit)="login($event)"/>
+  }
+  @else {
     <c-button label="Logout" (click)="logout()"/>
   }
 </ng-template>
