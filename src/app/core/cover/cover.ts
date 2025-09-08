@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { Sidebar } from './sidebar/sidebar';
-import { SectionModule } from '../section/section-module';
-import { ExperienceModule } from '../experience/experience-module';
+import { SectionModule } from './section/section-module';
+import { ExperienceModule } from './experience/experience-module';
 import { PrivateData } from '../../models/cover.models';
 import { Router } from '@angular/router';
 import { ToolbarContent } from '../../shared/pdf-layout/toolbar/toolbar-content';
@@ -9,6 +9,8 @@ import { Checkbox } from "../../shared/widgets/checkbox";
 import { AuthService } from '../../services/auth-service';
 import { Input } from "../../shared/widgets/input";
 import { ApiService } from '../../services/api-service';
+import { Button } from '../../shared/widgets/button';
+import { PdfService } from '../../services/pdf-service';
 
 @Component({
   selector: 'app-cover',
@@ -18,7 +20,8 @@ import { ApiService } from '../../services/api-service';
     ExperienceModule,
     ToolbarContent,
     Checkbox,
-    Input
+    Input,
+    Button
 ],
   templateUrl: './cover.html',
   styleUrl: './cover.scss'
@@ -27,6 +30,7 @@ export class Cover {
   private readonly router = inject(Router);
   private readonly authService = inject(AuthService);
   private readonly apiService = inject(ApiService);
+  private readonly pdfService = inject(PdfService);
 
   protected readonly print = signal(false);
   protected readonly private = signal(false);
@@ -67,5 +71,9 @@ export class Cover {
         this.privateData.set(data);
       }
     });
+  }
+
+  protected generatePdf(): void {
+    this.pdfService.generate();
   }
 }

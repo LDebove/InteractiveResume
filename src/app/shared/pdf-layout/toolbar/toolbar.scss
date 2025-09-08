@@ -12,6 +12,12 @@
   color: var(--font-color-inverted);
 }
 
+@media print {
+  .toolbar, .toggle-button {
+    display: none;
+  }
+}
+
 .toolbar {
   position: fixed;
   top: 40px;
