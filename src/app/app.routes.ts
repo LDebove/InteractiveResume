@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
 import { PdfLayout } from './shared/pdf-layout/pdf-layout';
 import { Cover } from './core/cover/cover';
+import { Tour } from './core/tour/tour';
 
 export const routes: Routes = [
-  // {
-  //   path: "tour",
-  //   component: Dwarka
-  // },
+  {
+    path: "tour",
+    component: Tour
+  },
   {
     path: "",
     component: PdfLayout,

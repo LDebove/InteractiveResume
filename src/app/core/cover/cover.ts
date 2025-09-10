@@ -46,7 +46,7 @@ export class Cover {
   }
 
   protected takeATour(): void {
-    this.router.navigate([""]);
+    this.router.navigate(["tour"]);
   }
 
   protected login(password: string): void {
