@@ -29,8 +29,10 @@ import { Component } from '@angular/core';
       }
 
       .content {
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         text-align: justify;
         gap: 15px;
       }
