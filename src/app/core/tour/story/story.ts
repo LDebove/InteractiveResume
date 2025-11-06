@@ -46,7 +46,6 @@ import { StoryCarousel } from "./story-carousel/story-carousel";
         display: flex;
         flex-direction: column;
         gap: 10px;
-        overflow-y: hidden;
 
         .story-header {
           display: flex;
@@ -77,7 +76,9 @@ import { StoryCarousel } from "./story-carousel/story-carousel";
           .description {
             flex-grow: 1;
             display: flex;
-            gap: 20px;
+            gap: 25px;
+            flex-wrap: wrap;
+            overflow-y: auto;
           }
         }
       }

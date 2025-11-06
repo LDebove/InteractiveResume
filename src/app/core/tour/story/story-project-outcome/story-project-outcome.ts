@@ -17,7 +17,8 @@ import { Component } from '@angular/core';
     }
 
     .outcome {
-      width: 50%;
+      min-width: 450px;
+      flex: 1 0;
       display: flex;
       flex-direction: column;
       gap: 5px;
@@ -32,9 +33,10 @@ import { Component } from '@angular/core';
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         text-align: justify;
         gap: 15px;
+        padding: 15px 0;
       }
 
     }
