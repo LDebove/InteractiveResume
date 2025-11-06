@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { StoryCarousel } from "./story-carousel/story-carousel";
 
 @Component({
   selector: 'app-story',
   imports: [StoryCarousel],
   template: `
-    <div class="story-container">
+    <div class="story-container" [id]="ref()">
       <div class="story">
         <div class="story-header">
           <div class="left">
@@ -86,5 +86,5 @@ import { StoryCarousel } from "./story-carousel/story-carousel";
   `
 })
 export class Story {
-
+  readonly ref = input.required<string>();
 }

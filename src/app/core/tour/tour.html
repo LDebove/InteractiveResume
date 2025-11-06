@@ -1,5 +1,5 @@
-<div class="tour">
-    <app-story>
+<div class="tour" (wheel)="scroll($event)">
+    <app-story ref="dwarka2">
         <app-story-title>
             Task Manager and Email Client Project
         </app-story-title>
@@ -82,7 +82,7 @@
             </span>
         </app-story-project-outcome>
     </app-story>
-    <app-story>
+    <app-story ref="dwarka1">
         <app-story-title>Jewel Recognition Software Project</app-story-title>
         <app-story-subtitle>Dwarka Jewel</app-story-subtitle>
         <app-story-location>Jaipur, India</app-story-location>
@@ -159,7 +159,7 @@
             </span>
         </app-story-project-outcome>
     </app-story>
-    <app-story>
+    <app-story ref="oxyl">
         <app-story-title>Internal Training Platform</app-story-title>
         <app-story-subtitle>Oxyl</app-story-subtitle>
         <app-story-location>Arcueil, France</app-story-location>
@@ -243,7 +243,7 @@
             </span>
         </app-story-project-outcome>
     </app-story>
-    <app-story>
+    <app-story ref="bioteos">
         <app-story-title>
             Microalgae Production Automation Project
         </app-story-title>

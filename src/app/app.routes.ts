@@ -5,6 +5,10 @@ import { Tour } from './core/tour/tour';
 
 export const routes: Routes = [
   {
+    path: "tour/:id",
+    component: Tour
+  },
+  {
     path: "tour",
     component: Tour
   },
