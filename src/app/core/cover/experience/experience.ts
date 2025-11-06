@@ -12,7 +12,7 @@ export class Experience {
 
   constructor(private router: Router) { }
 
-  open(): void {
+  protected open(): void {
     if (!this.ref()) {
       return;
     }

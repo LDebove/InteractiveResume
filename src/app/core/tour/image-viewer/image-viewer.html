@@ -1,0 +1,10 @@
+<div
+    class="image-viewer"
+    [class.hidden]="!image()"
+    (click)="close($event)"
+>
+    @if (image()) {
+        <img class="image" [src]="image()!.src" [alt]="image()!.label">
+        <span class="label">{{ image()!.label }}</span>
+    }
+</div>

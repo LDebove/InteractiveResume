@@ -1,0 +1,32 @@
+:host {
+    display: contents;
+}
+
+.image-viewer {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: safe center;
+    align-items: safe center;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    &.hidden {
+        display: none;
+    }
+
+    .image {
+        display: block;
+        max-width: 95%;
+        max-height: 90%;
+        object-fit: scale-down;
+    }
+
+    .label {
+        color: white;
+        font-weight: 500;
+    }
+}

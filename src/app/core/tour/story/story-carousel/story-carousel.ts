@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
       height: 200px;
       display: flex;
       justify-content: safe center;
-      gap: 5px;
+      gap: 15px;
       overflow-x: auto;
       border-top: 1px solid var(--color-3);
       border-bottom: 1px solid var(--color-3);
