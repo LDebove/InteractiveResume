@@ -17,9 +17,12 @@ import { Component } from '@angular/core';
       flex-shrink: 0;
       height: 200px;
       display: flex;
-      justify-content: center;
+      justify-content: safe center;
       gap: 5px;
       overflow-x: auto;
+      border-top: 1px solid var(--color-3);
+      border-bottom: 1px solid var(--color-3);
+      background: linear-gradient(0.25turn, var(--background-color), var(--color-1), var(--background-color));
     }
   `
 })

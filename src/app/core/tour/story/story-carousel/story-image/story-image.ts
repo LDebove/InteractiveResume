@@ -4,7 +4,7 @@ import { Component, input } from '@angular/core';
   selector: 'app-story-image',
   imports: [],
   template: `
-    <img [src]="imageSrc()" [alt]="imageSrc()" class="story-image">
+    <img [src]="imageSrc()" [alt]="label()" class="story-image">
   `,
   styles: `
     :host {
@@ -22,4 +22,5 @@ import { Component, input } from '@angular/core';
 })
 export class StoryImage {
   readonly imageSrc = input.required<string>();
+  readonly label = input.required<string>();
 }
